@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --red-hat: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--very-pale-blue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--red-hat);
+}
+
+button {
+  font-family: var(--red-hat);
+}
+
+main {
+  width: 400px;
+  max-width: 90%;
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: 0px 13px 25px 0px rgba(56, 41, 224, 0.25);
+}
+
+.image {
+  border-radius: 16px 16px 0 0;
+}
+.image img {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+
+.content {
+  padding: 30px 28px 24px;
+}
+.order {
+  text-align: center;
+}
+.order h1 {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+.order p {
+  margin-top: 16px;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+.plan button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--bright-blue);
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.price h3 {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+.price p {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+
+.btn {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.btn button {
+  padding: 16px 10px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn button:first-child {
+  background-color: var(--bright-blue);
+  color: var(--white);
+  box-shadow: 0px 13px 25px 0px rgba(56, 41, 224, 0.25);
+}
+
+.btn button:last-child {
+  background-color: transparent;
+  color: var(--desaturated-blue);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-size: cover;
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+  .content {
+    padding: 30px 20px 24px;
+  }
+  .order h1 {
+    font-size: 20px;
+  }
+  .order p {
+    font-size: 14px;
+  }
+  .plan button {
+    font-size: 12px;
+  }
+  .price h3 {
+    font-size: 14px;
+  }
+  .price p {
+    font-size: 12px;
+  }
+  .price img {
+    width: 35px;
+    height: 35px;
+  }
+  .btn button{
+    font-size: 14px;
+  }
+}
